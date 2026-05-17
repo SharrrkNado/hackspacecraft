@@ -20,6 +20,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
       - name: Install, build, and upload your site
         uses: withastro/action@v3
         # Das Skript erkennt automatisch npm, pnpm, yarn oder bun anhand deiner Lock-Datei
