@@ -9,7 +9,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://SharrrkNado.github.io',
-  base: '/hack-space-craft/',
+  base: '/hackspacecraft/',
   integrations: [mdx(), sitemap()],
 
   fonts: [
