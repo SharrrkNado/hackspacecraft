@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Startet den Build bei jedem Push auf den 'main' Branch
+  push:
+    branches: [ main ]
+  # Ermöglicht es, den Build manuell im GitHub-Dashboard anzustoßen
+  workflow_dispatch:
+
+# Erlaubt dem Skript, die Seite zu bauen und zu veröffentlichen
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install, build, and upload your site
+        uses: withastro/action@v3
+        # Das Skript erkennt automatisch npm, pnpm, yarn oder bun anhand deiner Lock-Datei
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
