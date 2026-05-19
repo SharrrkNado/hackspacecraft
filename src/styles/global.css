@@ -3,10 +3,10 @@
 @theme {
 	--color-accent: var(--accent);
 	--color-primary: var(--primary);
-	--color-base: light-dark(#fffedd,#04061f);
+	--color-base: light-dark(#ffffbb,#04050e);
 	--color-surface: var(--accent);
 	--default-font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--color-text: light-dark(darkslategray, lightgray);
+	--color-text: light-dark(#333, #dda);
 }
 
 @layer base {
