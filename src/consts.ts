@@ -1,5 +1,5 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
-
+export const BASE = '/hackspacecraft';
 export const SITE_TITLE = 'Hack Space Craft';
 export const SITE_DESCRIPTION = 'Wilkommen auf Hack Space Craft';
